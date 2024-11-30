@@ -1,6 +1,7 @@
 import About from "../components/About"
 import Hero from "../components/Hero"
 import Integration from "../components/Integration"
+import { TimelineDemo } from "../components/TimelineDemo"
 
 export const Home = () => {
   return (
@@ -8,6 +9,7 @@ export const Home = () => {
       <Hero />
       <About />
       <Integration />
+      <TimelineDemo />
     </div>
   )
 }
