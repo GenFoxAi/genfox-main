@@ -145,7 +145,7 @@ const Hero = () => {
     <div className='relative w-full h-[650px] text-[#2e2e2e] px-5 flex justify-between items-center flex-col sm:flex-row sm:px-[100px] mt-[50px]'>
       <div className='w-full'>
         <motion.div
-          className='custom-font text-[40px] md:text-[80px] leading-snug text-center sm:text-left'
+          className='custom-font text-[30px] md:text-[40px] lg:text-[60px] xl:text-[70px] leading-snug text-center sm:text-left'
           initial='hidden'
           animate='visible'
           variants={textVariants}
