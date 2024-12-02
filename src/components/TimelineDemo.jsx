@@ -3,10 +3,10 @@ import pic1 from '../assets/WhatsApp_Chatbots_in_APAC_130623.webp';
 import pic2 from '../assets/apple-fitness-app-feature.jpeg';
 import pic3 from '../assets/google.png';
 import pic4 from '../assets/outlook.png';
-import pic5 from '../assets/1679397649854.jpg';
-import pic6 from '../assets/analysis.jpg';
-import pic7 from '../assets/insights.jpeg';
-import pic8 from '../assets/learning.jpg';
+import pic5 from '../assets/data.jpg';
+import pic6 from '../assets/adaptive-learning.png';
+import pic7 from '../assets/dataanlaysis.jpg';
+import pic8 from '../assets/artificial-intelligence-concept-ai-machine-learning-analysis-information-digital-brain_501813-442.avif';
 
 export function TimelineDemo() {
   const data = [
