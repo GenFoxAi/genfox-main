@@ -1,4 +1,4 @@
-import { Timeline } from '@/components/ui/timeline';
+import { Timeline } from './ui/Timeline';
 import pic1 from '../assets/WhatsApp_Chatbots_in_APAC_130623.webp';
 import pic2 from '../assets/apple-fitness-app-feature.jpeg';
 import pic3 from '../assets/google.png';
