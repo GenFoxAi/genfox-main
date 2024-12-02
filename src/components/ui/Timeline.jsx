@@ -1,28 +1,44 @@
 'use client';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
-import TextGenerateEffect from '../ui/TextGenerateEffect'
+import TextGenerateEffect from '../ui/TextGenerateEffect';
 
-const words = 'Simplify Your Life with Margaret AI'
+const words = 'Simplify Your Life with Margaret AI';
 
 export const Timeline = ({ data }) => {
   const ref = useRef(null);
   const containerRef = useRef(null);
-  const [height, setHeight] = useState(0);
+  const [contentHeight, setContentHeight] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const updateScreenSize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    updateScreenSize(); // Initial check
+    window.addEventListener('resize', updateScreenSize);
+
+    return () => window.removeEventListener('resize', updateScreenSize);
+  }, []);
 
   useEffect(() => {
     if (ref.current) {
       const rect = ref.current.getBoundingClientRect();
-      setHeight(rect.height);
+      setContentHeight(rect.height);
     }
-  }, [ref]);
+  }, [ref, data]); // Recalculate if data changes
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start 10%', 'end 50%'],
   });
 
-  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
+  const heightTransform = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0, isMobile ? contentHeight : contentHeight]
+  );
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
@@ -37,7 +53,7 @@ export const Timeline = ({ data }) => {
         </p>
       </div>
       <div ref={ref} className='relative max-w-7xl mx-auto pb-20'>
-        {data.map((item, index) => (
+        {data?.map((item, index) => (
           <div
             key={index}
             className='flex justify-start pt-10 md:pt-40 md:gap-10'
@@ -61,7 +77,7 @@ export const Timeline = ({ data }) => {
         ))}
         <div
           style={{
-            height: height + 'px',
+            height: `${contentHeight}px`,
           }}
           className='absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]'
         >
