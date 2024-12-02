@@ -17,7 +17,7 @@ export const Timeline = ({ data }) => {
       setIsMobile(window.innerWidth < 768);
     };
 
-    updateScreenSize(); // Initial check
+    updateScreenSize();
     window.addEventListener('resize', updateScreenSize);
 
     return () => window.removeEventListener('resize', updateScreenSize);
@@ -26,19 +26,23 @@ export const Timeline = ({ data }) => {
   useEffect(() => {
     if (ref.current) {
       const rect = ref.current.getBoundingClientRect();
-      setContentHeight(rect.height);
+      const computedStyles = window.getComputedStyle(ref.current);
+      const marginBottom = parseFloat(computedStyles.marginBottom);
+      
+      const buffer = isMobile ? 0 : 500;
+      setContentHeight(rect.height + marginBottom + buffer);
     }
-  }, [ref, data]); // Recalculate if data changes
+  }, [ref, data, isMobile]);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ['start 10%', 'end 50%'],
+    offset: ['start 0%', 'end 100%'], 
   });
 
   const heightTransform = useTransform(
     scrollYProgress,
     [0, 1],
-    [0, isMobile ? contentHeight : contentHeight]
+    [0, contentHeight]
   );
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
@@ -60,8 +64,8 @@ export const Timeline = ({ data }) => {
             className='flex justify-start pt-10 md:pt-40 md:gap-10'
           >
             <div className='sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full'>
-              <div className='h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white flex items-center justify-center'>
-                <div className='h-4 w-4 rounded-full bg-neutral-200 border border-neutral-300 p-2' />
+              <div className='h-10 absolute left-3 md:left-3 w-10 rounded-full bg-neutral-200 flex items-center justify-center'>
+                <div className='h-4 w-4 rounded-full bg-neutral-400 border border-neutral-300 p-2' />
               </div>
               <h3 className='hidden md:block text-xl md:pl-20 md:text-3xl font-bold text-neutral-500'>
                 {item.title}

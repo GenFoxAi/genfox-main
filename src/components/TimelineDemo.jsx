@@ -1,12 +1,12 @@
 import { Timeline } from './ui/Timeline';
-import pic1 from '../assets/WhatsApp_Chatbots_in_APAC_130623.webp';
-import pic2 from '../assets/apple-fitness-app-feature.jpeg';
-import pic3 from '../assets/google.png';
-import pic4 from '../assets/outlook.png';
-import pic5 from '../assets/data.jpg';
-import pic6 from '../assets/adaptive-learning.png';
-import pic7 from '../assets/dataanlaysis.jpg';
-import pic8 from '../assets/artificial-intelligence-concept-ai-machine-learning-analysis-information-digital-brain_501813-442.avif';
+import pic1 from '../assets/Whatsapp.png';
+import pic2 from '../assets/apple.png';
+import pic3 from '../assets/Googles.png';
+import pic4 from '../assets/8500323.webp';
+import pic5 from '../assets/dataprivacy.webp';
+import pic6 from '../assets/machineleaning.webp';
+import pic7 from '../assets/dataanalysis.webp';
+import pic8 from '../assets/insightsengine.webp';
 
 export function TimelineDemo() {
   const data = [
@@ -19,26 +19,26 @@ export function TimelineDemo() {
             built to enhance your productivity and streamline your daily tasks
             effortlessly.
           </p>
-          <div className='grid grid-cols-2 gap-4'>
+          <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4'>
             <img
               src={pic1}
               alt='startup template'
-              className='rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset]'
+              className='mx-auto w-[220px]  object-cover rounded-md'
             />
             <img
               src={pic2}
               alt='startup template'
-              className='rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset]'
+              className='mx-auto w-[220px]  object-cover rounded-md'
             />
             <img
               src={pic3}
               alt='startup template'
-              className='rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset]'
+              className='mx-auto w-[240px]  object-cover rounded-md'
             />
             <img
               src={pic4}
               alt='startup template'
-              className='rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset]'
+              className='mx-auto w-[240px]  object-cover rounded-md'
             />
           </div>
         </div>
@@ -53,27 +53,55 @@ export function TimelineDemo() {
             deliver smarter solutions tailored to your needs.
           </p>
 
-          <div className='grid grid-cols-2 gap-4'>
-            <img
-              src={pic5}
-              alt='hero template'
-              className='rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset]'
-            />
-            <img
-              src={pic6}
-              alt='feature template'
-              className='rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset]'
-            />
-            <img
-              src={pic7}
-              alt='bento template'
-              className='rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset]'
-            />
-            <img
-              src={pic8}
-              alt='cards template'
-              className='rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset]'
-            />
+          <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4 p-4'>
+            <div>
+              <img
+                src={pic5}
+                alt='startup template'
+                className='mx-auto w-[220px] object-cover rounded-md'
+              />
+              <div className='text-center w-fit mx-auto mt-2'>
+                <p className='font-medium text-[10px] sm:text-base md:text-[14px] bg-white/30 backdrop-blur-md backdrop-opacity-50 rounded-full px-4 sm:px-6 py-1 sm:py-2 shadow-md border border-white/20'>
+                  Privacy and Security AI
+                </p>
+              </div>
+            </div>
+            <div>
+              <img
+                src={pic6}
+                alt='startup template'
+                className='mx-auto w-[220px] object-cover rounded-md'
+              />
+              <div className='text-center w-fit mx-auto mt-2'>
+                <p className='font-medium text-[10px] text-sm sm:text-base md:text-[14px] bg-white/30 backdrop-blur-md backdrop-opacity-50 rounded-full px-4 sm:px-6 py-1 sm:py-2 shadow-md border border-white/20'>
+                  Adaptive Learning System
+                </p>
+              </div>
+            </div>
+            <div>
+              <img
+                src={pic7}
+                alt='startup template'
+                className='mx-auto w-[240px] object-cover rounded-md'
+              />
+              <div className='text-center w-fit mx-auto mt-2'>
+                <p className='font-medium text-[10px]  sm:text-base md:text-[14px] bg-white/30 backdrop-blur-md backdrop-opacity-50 rounded-full px-4 sm:px-3 py-1 sm:py-2 shadow-md border border-white/20'>
+                  Real-Time Data Analytics & Forecasting
+                </p>
+              </div>
+            </div>
+            <div>
+              <img
+                src={pic8}
+                alt='startup template'
+                className='mx-auto w-[240px] object-cover rounded-md'
+              />
+              <div className='text-center w-fit mx-auto mt-2'>
+                <p className='font-medium text-[10px]  sm:text-base md:text-[14px] bg-white/30 backdrop-blur-md backdrop-opacity-50 rounded-full px-4 sm:px-6 py-1 sm:py-2 shadow-md border border-white/20'>
+                  AI-Powered Insights Engine
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       ),

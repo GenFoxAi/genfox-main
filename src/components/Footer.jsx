@@ -1,40 +1,54 @@
+import { motion } from 'framer-motion';
+
 const Footer = () => {
   return (
-    <footer className="">
-  <div className="mx-auto max-w-5xl mt-[200px] px-4 py-16 sm:px-6 lg:px-8">
-    <div className="flex justify-center text-teal-600">
-     <img className="w-[50px]" src="/logo.webp" alt="logo" />
-    </div>
+    <motion.footer
+      className=""
+      initial={{ y: 50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
+    >
+      <div className="mx-auto max-w-5xl mt-[100px] px-4 py-16 sm:px-6 lg:px-8">
+        <div className="flex justify-center text-teal-600">
+          <img className="w-[50px]" src="/logo.webp" alt="logo" />
+        </div>
 
-    <p className="text-xl font-semibold tracking-tight ml-1 sm:pr-0 pr-4  sm:text-3xl text-center">Margaret</p>
+        <p className="text-xl font-semibold tracking-tight ml-1 sm:pr-0 pr-4 sm:text-3xl text-center">Margaret</p>
 
-    <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
-      <li>
-        <a className="text-gray-700 text-sm  transition hover:text-gray-700/75" href="#"> About </a>
-      </li>
+        <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
+          <li>
+            <a className="text-gray-700 text-sm transition hover:text-gray-700/75" href="#">
+              About
+            </a>
+          </li>
+          <li>
+            <a className="text-gray-700 text-sm transition hover:text-gray-700/75" href="#">
+              Careers
+            </a>
+          </li>
+          <li>
+            <a className="text-gray-700 text-sm transition hover:text-gray-700/75" href="#">
+              History
+            </a>
+          </li>
+          <li>
+            <a className="text-gray-700 text-sm transition hover:text-gray-700/75" href="#">
+              Services
+            </a>
+          </li>
+          <li>
+            <a className="text-gray-700 text-sm transition hover:text-gray-700/75" href="#">
+              Projects
+            </a>
+          </li>
+          <li>
+            <a className="text-gray-700 text-sm transition hover:text-gray-700/75" href="#">
+              Blog
+            </a>
+          </li>
+        </ul>
 
-      <li>
-        <a className="text-gray-700 text-sm  transition hover:text-gray-700/75" href="#"> Careers </a>
-      </li>
-
-      <li>
-        <a className="text-gray-700 text-sm  transition hover:text-gray-700/75" href="#"> History </a>
-      </li>
-
-      <li>
-        <a className="text-gray-700 text-sm  transition hover:text-gray-700/75" href="#"> Services </a>
-      </li>
-
-      <li>
-        <a className="text-gray-700 text-sm  transition hover:text-gray-700/75" href="#"> Projects </a>
-      </li>
-
-      <li>
-        <a className="text-gray-700 text-sm  transition hover:text-gray-700/75" href="#"> Blog </a>
-      </li>
-    </ul>
-
-    <ul className="mt-12 flex justify-center gap-6 md:gap-8">
+        <ul className="mt-12 flex justify-center gap-6 md:gap-8">
       <li>
         <a
           href="#"
@@ -123,8 +137,9 @@ const Footer = () => {
         </a>
       </li>
     </ul>
-  </div>
-</footer>
-  )
-}
-export default Footer
+      </div>
+    </motion.footer>
+  );
+};
+
+export default Footer;
