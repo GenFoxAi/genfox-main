@@ -14,35 +14,35 @@ const Footer = () => {
         </div>
 
         <p className="text-xl font-semibold tracking-tight ml-1 sm:pr-0 pr-4 sm:text-3xl text-center">Margaret</p>
-
-        <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
+        <p className='text-center text-black/60 pt-3 text-[13px]'>Leverage AI technology to automate tasks, <br /> optimize workflows and more.</p>
+        <ul className="mt-8 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
           <li>
-            <a className="text-gray-700 text-sm transition hover:text-gray-700/75" href="#">
+            <a className="text-gray-700 text-[13px]  font-medium transition hover:text-gray-700/75" href="#">
               About
             </a>
           </li>
           <li>
-            <a className="text-gray-700 text-sm transition hover:text-gray-700/75" href="#">
+            <a className="text-gray-700 text-[13px]  font-medium transition hover:text-gray-700/75" href="#">
               Careers
             </a>
           </li>
           <li>
-            <a className="text-gray-700 text-sm transition hover:text-gray-700/75" href="#">
+            <a className="text-gray-700 text-[13px]  font-medium transition hover:text-gray-700/75" href="#">
               History
             </a>
           </li>
           <li>
-            <a className="text-gray-700 text-sm transition hover:text-gray-700/75" href="#">
+            <a className="text-gray-700 text-[13px]  font-medium transition hover:text-gray-700/75" href="#">
               Services
             </a>
           </li>
           <li>
-            <a className="text-gray-700 text-sm transition hover:text-gray-700/75" href="#">
+            <a className="text-gray-700 text-[13px]  font-medium transition hover:text-gray-700/75" href="#">
               Projects
             </a>
           </li>
           <li>
-            <a className="text-gray-700 text-sm transition hover:text-gray-700/75" href="#">
+            <a className="text-gray-700 text-[13px]  font-medium transition hover:text-gray-700/75" href="#">
               Blog
             </a>
           </li>
@@ -138,6 +138,9 @@ const Footer = () => {
       </li>
     </ul>
       </div>
+      <div className="mt-4 mb-2 border-t border-gray-200 mx-5"></div>
+      <p className='text-neutral-300 mx-5 font-medium text-[12px]'>@ 2024 Fnaxiom</p>
+
     </motion.footer>
   );
 };
