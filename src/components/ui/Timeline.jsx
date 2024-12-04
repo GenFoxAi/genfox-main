@@ -29,7 +29,7 @@ export const Timeline = ({ data }) => {
       const computedStyles = window.getComputedStyle(ref.current);
       const marginBottom = parseFloat(computedStyles.marginBottom);
       
-      const buffer = isMobile ? 0 : 500;
+      const buffer = isMobile ? 0 : 50;
       setContentHeight(rect.height + marginBottom + buffer);
     }
   }, [ref, data, isMobile]);
