@@ -1,5 +1,5 @@
 import { Timeline } from './ui/Timeline';
-import pic1 from '../assets/Whatsapp.png';
+// import pic1 from '../assets/Whatsapp.png';
 import pic2 from '../assets/apple.png';
 import pic3 from '../assets/Google__G__logo.svg.webp';
 import pic4 from '../assets/8500323.webp';
@@ -8,6 +8,7 @@ import pic6 from '../assets/machineleaning.webp';
 import pic7 from '../assets/dataanalysis.webp';
 import pic8 from '../assets/insightsengine.webp';
 import whatsapp from '../assets/WhatsApp.svg.webp';
+
 
 export function TimelineDemo() {
   const items = [
@@ -45,7 +46,6 @@ export function TimelineDemo() {
     },
   ];
   
-  // AI Products Section
   const aiProducts = [
     {
       id: 1,
@@ -78,7 +78,7 @@ export function TimelineDemo() {
       title: 'Platform Integration',
       content: (
         <div>
-          <p className="text-neutral-800 text-xs md:text-sm font-medium text-black/50 mb-8">
+          <p className="text-neutral-400 text-xs md:text-sm font-medium text-black/50 mb-8">
             Experience the power of advanced integrations and intuitive design,
             built to enhance your productivity and streamline your daily tasks
             effortlessly.
@@ -124,7 +124,7 @@ export function TimelineDemo() {
       title: 'AI Products',
       content: (
         <div>
-          <p className="text-neutral-800 text-xs md:text-sm font-normal mb-8">
+          <p className="text-neutral-400 text-xs md:text-sm font-medium mb-8">
             Leverage AI technology to automate tasks, optimize workflows, and deliver smarter solutions tailored to your needs.
           </p>
 
