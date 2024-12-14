@@ -7,16 +7,12 @@ import {
   FiPieChart,
 } from 'react-icons/fi';
 import { AnimatePresence, motion } from 'framer-motion';
-import cryptoimg from '../assets/cryptowire.png'
-import camoimg from '../assets/camoimg.webp'
-
+import cryptoimg from '../assets/cryptowire.png';
+import camoimg from '../assets/camoimg.webp';
 
 export const ShiftingDropDown = () => {
   return (
-    <div
-      className='w-full flex justify-center py-4 px-4 shadow-custom rounded-full'
-
-    >
+    <div className='w-full flex justify-center py-4 px-4 shadow-custom rounded-full'>
       <Tabs />
     </div>
   );
@@ -168,47 +164,73 @@ const Nub = ({ selected }) => {
 const Products = () => {
   return (
     <div>
-     <div>
-  <div className='flex gap-4'>
-    <div>
-      <h3 className='mb-2 text-sm font-medium'>Startup</h3>
-      <a href='#' className='mb-1 block text-[13px] text-neutral-400 hover:text-neutral-900'>
-        Bookkeeping
-      </a>
-      <a href='#' className='block text-[13px] text-neutral-400 hover:text-neutral-900'>
-        Invoicing
-      </a>
-    </div>
-    <div>
-      <h3 className='mb-2 text-sm font-medium'>Scaleup</h3>
-      <a href='#' className='mb-1 block text-[13px] text-neutral-400 hover:text-neutral-900'>
-        Live Coaching
-      </a>
-      <a href='#' className='mb-1 block text-[13px] text-neutral-400 hover:text-neutral-900'>
-        Reviews
-      </a>
-      <a href='#' className='block text-[13px] text-neutral-400 hover:text-neutral-900'>
-        Tax/VAT
-      </a>
-    </div>
-    <div>
-      <h3 className='mb-2 text-sm font-medium'>Enterprise</h3>
-      <a href='#' className='mb-1 block text-[13px] text-neutral-400 hover:text-neutral-900'>
-        White glove
-      </a>
-      <a href='#' className='mb-1 block text-[13px] text-neutral-400 hover:text-neutral-900'>
-        SOX Compliance
-      </a>
-      <a href='#' className='block text-[13px] text-neutral-400 hover:text-neutral-900'>
-        Staffing
-      </a>
-      <a href='#' className='block text-[13px] text-neutral-400 hover:text-neutral-900'>
-        More
-      </a>
-    </div>
-  </div>
-</div>
-
+      <div>
+        <div className='flex gap-4'>
+          <div>
+            <h3 className='mb-2 text-sm font-medium'>Startup</h3>
+            <a
+              href='#'
+              className='mb-1 block text-[13px] text-neutral-400 hover:text-neutral-900'
+            >
+              Bookkeeping
+            </a>
+            <a
+              href='#'
+              className='block text-[13px] text-neutral-400 hover:text-neutral-900'
+            >
+              Invoicing
+            </a>
+          </div>
+          <div>
+            <h3 className='mb-2 text-sm font-medium'>Scaleup</h3>
+            <a
+              href='#'
+              className='mb-1 block text-[13px] text-neutral-400 hover:text-neutral-900'
+            >
+              Live Coaching
+            </a>
+            <a
+              href='#'
+              className='mb-1 block text-[13px] text-neutral-400 hover:text-neutral-900'
+            >
+              Reviews
+            </a>
+            <a
+              href='#'
+              className='block text-[13px] text-neutral-400 hover:text-neutral-900'
+            >
+              Tax/VAT
+            </a>
+          </div>
+          <div>
+            <h3 className='mb-2 text-sm font-medium'>Enterprise</h3>
+            <a
+              href='#'
+              className='mb-1 block text-[13px] text-neutral-400 hover:text-neutral-900'
+            >
+              White glove
+            </a>
+            <a
+              href='#'
+              className='mb-1 block text-[13px] text-neutral-400 hover:text-neutral-900'
+            >
+              SOX Compliance
+            </a>
+            <a
+              href='#'
+              className='block text-[13px] text-neutral-400 hover:text-neutral-900'
+            >
+              Staffing
+            </a>
+            <a
+              href='#'
+              className='block text-[13px] text-neutral-400 hover:text-neutral-900'
+            >
+              More
+            </a>
+          </div>
+        </div>
+      </div>
 
       <button className='ml-auto mt-4 flex items-center gap-1 text-sm text-black'>
         <span>View more</span>

@@ -10,10 +10,10 @@ const Footer = () => {
     >
       <div className="mx-auto max-w-5xl mt-[100px] px-4 py-16 sm:px-6 lg:px-8">
         <div className="flex justify-center text-teal-600">
-          <img className="w-[50px]" src="/logo.webp" alt="logo" />
+          <img className="w-[50px]" src="/logo.png" alt="logo" />
         </div>
 
-        <p className="text-xl font-semibold tracking-tight ml-1 sm:pr-0 pr-4 sm:text-3xl text-center">Margaret</p>
+        <p className="text-xl font-semibold tracking-tight ml-1 sm:pr-0 pr-4 sm:text-3xl text-center">GenFox</p>
         <p className='text-center text-black/60 pt-3 text-[13px]'>Leverage AI technology to automate tasks, <br /> optimize workflows and more.</p>
         <ul className="mt-8 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
           <li>
