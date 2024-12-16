@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-// import hero from '../assets/robo.png';
 import whatsapp from '../assets/Whatsapp.png';
 import drive from '../assets/Drive2OctDenoiserBeauty_002 2.png';
 import gmail from '../assets/Gmail.png';
@@ -14,7 +13,7 @@ const Hero = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollThreshold = 160;
+      const scrollThreshold = 2360;
       setIsScrolled(window.scrollY > scrollThreshold);
     };
 

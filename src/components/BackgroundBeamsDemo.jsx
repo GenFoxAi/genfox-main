@@ -8,7 +8,7 @@ export function BackgroundBeamsDemo() {
         <h1 className='relative z-10 text-2xl sm:text-2xl md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-500 text-center font-sans font-bold'>
           Join the Waitlist
         </h1>
-        <p className='text-neutral-500 max-w-sm sm:max-w-md mx-auto my-4 text-sm sm:text-base font-medium text-center relative z-10'>
+        <p className='text-neutral-500  max-w-sm sm:max-w-md mx-auto my-4 text-sm sm:text-base font-medium text-center relative z-10'>
           Your Charter wallet is packed with neat features that further assist
           you in operating your daily finances.
         </p>
