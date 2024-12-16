@@ -11,11 +11,9 @@ import { BackgroundBeams } from '../components/ui/background-beams';
 
 export const Home = () => {
   return (
-    <div className=''>
+    <div>
       <SmoothScrollHero />
-  
-        <Hero />
-    
+      <Hero />
       <About />
       <Integration />
       <TimelineDemo />

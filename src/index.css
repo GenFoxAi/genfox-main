@@ -2,12 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   max-width: 1664px;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
-
 
 .shadow-custom {
   box-shadow: rgba(0, 0, 0, 0.1) -4px 6px 15px -6px;
@@ -24,4 +22,3 @@ body {
   font-family: 'Eudoxus Sans', sans-serif;
   font-weight: 700;
 }
-

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+// import hero from '../assets/robo.png';
 import whatsapp from '../assets/Whatsapp.png';
 import drive from '../assets/Drive2OctDenoiserBeauty_002 2.png';
 import gmail from '../assets/Gmail.png';
@@ -124,13 +125,13 @@ const Hero = () => {
 
   const outlookPositionVariants = {
     initial: { x: -200, y: -50, opacity: 0 },
-    visible: { x: -140, y: -20, opacity: 1, rotate: -10, scale: 1.6 },
+    visible: { x: -50, y: -20, opacity: 1, rotate: -10, scale: 1.2 },
     scrolled: { x: -300, y: -100, opacity: 0, scale: 1.2 },
   };
 
   const dropboxPositionVariants = {
     initial: { x: 150, y: 150, opacity: 0 },
-    visible: { x: 100, y: -100, opacity: 1, rotate: 20, scale: 1 },
+    visible: { x: 20, y: -100, opacity: 1, rotate: 20, scale: 1 },
     scrolled: { x: 200, y: 200, opacity: 0 },
   };
 
@@ -141,7 +142,7 @@ const Hero = () => {
   };
 
   return (
-    <div className='relative w-full h-[650px] text-[#2e2e2e] px-5 flex justify-between items-center flex-col sm:flex-row sm:px-[100px] mt-[50px]'>
+    <div className='relative w-full h-[650px] overflow-hidden  text-[#2e2e2e] px-5 flex justify-between items-center flex-col sm:flex-row sm:px-[100px] mt-[50px]'>
       <div className='w-full'>
         <motion.div
           className='custom-font text-[30px] md:text-[40px] lg:text-[60px] xl:text-[70px] leading-snug text-center sm:text-left'
@@ -193,7 +194,7 @@ const Hero = () => {
       </div>
 
       {/* <div className='relative w-[80%] flex items-center'> */}
-      <div className='relative sm:w-[60%] flex items-center'>
+      <div className='relative sm:w-[60%] flex items-center '>
         {/* <motion.img
           src={hero}
           alt='AI Assistant'
