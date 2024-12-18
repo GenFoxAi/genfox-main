@@ -8,7 +8,7 @@ const words = ['WhatsApp Architecture'];
 const Integration = () => {
   return (
     <div>
-      <div className='flex  flex-col my-[60px] sm:my-[100px]'>
+      <div className='flex  flex-col my-[20px] sm:my-[100px]'>
         <div className='pb-[30px] sm:pb-[30px] text-center'>
           <div className='custom-font text-[22px] whitespace-nowrap sm:text-[40px] text-[#2e2e2e]'>
             <TextGenerateEffect duration={2} filter={false} words={words} />
