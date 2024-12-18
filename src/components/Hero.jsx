@@ -7,14 +7,14 @@ import gmail from '../assets/Gmail.png';
 import web from '../assets/5285066.webp';
 import outlook from '../assets/8500323.webp';
 import dropbox from '../assets/DropboxOctDenoiserBeauty_002 2.png';
-import avatar from '../assets/avatar.png';
+import avatar from '../assets/new_avatar.png';
 
 const Hero = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollThreshold = 2360;
+      const scrollThreshold = 2400;
       setIsScrolled(window.scrollY > scrollThreshold);
     };
 
@@ -194,7 +194,7 @@ const Hero = () => {
       </div>
 
       {/* <div className='relative w-[80%] flex items-center'> */}
-      <div className='relative sm:w-[60%] flex items-center '>
+      <div className='relative sm:w-[60%] flex items-center'>
         {/* <motion.img
           src={hero}
           alt='AI Assistant'
@@ -206,7 +206,7 @@ const Hero = () => {
         <motion.img
           src={avatar}
           alt='AI Assistant'
-          className='w-full h-full object-cover rounded-xl'
+          className='w-full h-full object-cover'
           variants={imageVariants}
           initial='hidden'
           animate='visible'

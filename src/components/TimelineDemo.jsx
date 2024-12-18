@@ -11,7 +11,6 @@ import pic6 from '../assets/machineleaning.webp';
 import pic7 from '../assets/dataanalysis.webp';
 import pic8 from '../assets/insightsengine.webp';
 
-// Modal Component
 const SpringModal = ({ isOpen, setIsOpen, content }) => {
   return (
     <AnimatePresence>
@@ -145,7 +144,7 @@ export function TimelineDemo() {
       title: 'Whatsapp',
       website: 'whatsapp.com',
       description:
-        'Integration with WhatsApp for enhanced messaging capabilities.',
+        'Integration with WhatsApp for enhanced messaging capabilities. Connect with customers where they are most active.',
       modal: {
         title: 'WhatsApp Integration',
         description:
@@ -157,7 +156,8 @@ export function TimelineDemo() {
       logo: pic2,
       title: 'Apple',
       website: 'apple.com',
-      description: 'Integrate with Apple services for better user experience.',
+      description:
+        'Integrate with Apple services for better user experience. Take advantage of Apple’s robust ecosystem and services.',
       modal: {
         title: 'Apple Integration',
         description:
@@ -169,7 +169,8 @@ export function TimelineDemo() {
       logo: pic3,
       title: 'Google',
       website: 'google.com',
-      description: 'Integrate with Google’s ecosystem for productivity.',
+      description:
+        'Integrate with Google’s ecosystem for productivity. Gain access to tools for streamlined workflows and collaboration.',
       modal: {
         title: 'Google Integration',
         description:
@@ -181,7 +182,8 @@ export function TimelineDemo() {
       logo: pic4,
       title: 'Outlook',
       website: 'outlook.com',
-      description: 'Enhance your platform with Outlook email services.',
+      description:
+        'Enhance your platform with Outlook email services. Utilize professional email and scheduling tools with ease.',
       modal: {
         title: 'Outlook Integration',
         description:
@@ -189,6 +191,7 @@ export function TimelineDemo() {
       },
     },
   ];
+  
 
   const aiProducts = [
     {
@@ -196,7 +199,7 @@ export function TimelineDemo() {
       image: pic5,
       title: 'Privacy and Security AI',
       description:
-        'Enhance your platform security with advanced AI-powered privacy solutions.',
+        'Enhance your platform security with advanced AI-powered privacy solutions. Stay one step ahead of cyber threats.',
       modal: {
         title: 'Privacy and Security AI',
         description:
@@ -208,7 +211,7 @@ export function TimelineDemo() {
       image: pic6,
       title: 'Adaptive Learning System',
       description:
-        'Leverage machine learning to create dynamic, adaptive learning experiences.',
+        'Leverage machine learning to create dynamic, adaptive learning experiences. Revolutionize education with personalized AI tools.',
       modal: {
         title: 'Adaptive Learning System',
         description:
@@ -220,7 +223,7 @@ export function TimelineDemo() {
       image: pic7,
       title: 'Real-Time Data Analytics & Forecasting',
       description:
-        'Make data-driven decisions faster with AI-driven real-time analytics and predictions.',
+        'Make data-driven decisions faster with AI-driven real-time analytics and predictions. Turn raw data into actionable insights.',
       modal: {
         title: 'Real-Time Data Analytics',
         description:
@@ -232,7 +235,7 @@ export function TimelineDemo() {
       image: pic8,
       title: 'AI-Powered Insights Engine',
       description:
-        'Unlock deeper insights from your data using cutting-edge AI technologies.',
+        'Unlock deeper insights from your data using cutting-edge AI technologies. Transform data into powerful business strategies.',
       modal: {
         title: 'AI-Powered Insights Engine',
         description:
@@ -240,6 +243,7 @@ export function TimelineDemo() {
       },
     },
   ];
+  
 
   const data = [
     {
@@ -264,10 +268,10 @@ export function TimelineDemo() {
                   </p>
                 </div>
               </div>
-              <p className='text-[12px] py-2 px-5 font-medium text-black/50'>
+              <p className='text-[14px] py-4 px-5 font-medium text-black/50'>
                 {item.description}
               </p>
-              <div className='flex items-center justify-end pb-4 px-4'>
+              {/* <div className='flex items-center justify-end pb-4 px-4'>
                 <button
                   onClick={() => {
                     setModalContent(item.modal);
@@ -277,7 +281,7 @@ export function TimelineDemo() {
                 >
                   View Integration
                 </button>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
@@ -302,10 +306,10 @@ export function TimelineDemo() {
                   <p className='font-semibold text-md'>{product.title}</p>
                 </div>
               </div>
-              <p className='text-[12px] py-2 px-5 font-medium text-black/50'>
+              <p className='text-[14px] py-4 px-5 font-medium text-black/50'>
                 {product.description}
               </p>
-              <div className='flex items-center justify-end pb-4 px-4'>
+              {/* <div className='flex items-center justify-end pb-4 px-4'>
                 <button
                   onClick={() => {
                     setModalContent(product.modal);
@@ -315,7 +319,7 @@ export function TimelineDemo() {
                 >
                   Learn More
                 </button>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
