@@ -1,20 +1,24 @@
 import { motion } from 'framer-motion';
-import linkedin from '../assets/linkedin.png'
+import linkedin from '../assets/linkedin.png';
 const Footer = () => {
   return (
     <motion.footer
-      className=""
+      className=''
       initial={{ y: 50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}
     >
-      <div className="mx-auto max-w-5xl mt-[100px] px-4 py-16 sm:px-6 lg:px-8">
-        <div className="flex justify-center text-teal-600">
-          <img className="w-[50px]" src="/logo.png" alt="logo" />
+      <div className='mx-auto max-w-5xl mt-[100px] px-4 py-16 sm:px-6 lg:px-8'>
+        <div className='flex justify-center text-teal-600'>
+          <img className='w-[60px]' src='/logo.png' alt='logo' />
         </div>
 
-        <p className="text-xl font-semibold tracking-tight ml-1 sm:pr-0 pr-4 sm:text-3xl text-center">GenFox</p>
-        <p className='text-center text-black/60 pt-3 text-[13px]'>Leverage AI technology to automate tasks, <br /> optimize workflows and more.</p>
+        <p className='text-xl font-semibold tracking-tight ml-1 sm:pr-0 pr-4 sm:text-3xl text-center'>
+          GenFox
+        </p>
+        <p className='text-center text-black/40 pt-3 font-semibold text-[16px]'>
+          Your assistant from future
+        </p>
         {/* <ul className="mt-8 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
           <li>
             <a className="text-gray-700 text-[13px]  font-medium transition hover:text-gray-700/75" href="#">
@@ -48,8 +52,8 @@ const Footer = () => {
           </li>
         </ul> */}
 
-        <ul className="mt-12 flex justify-center gap-6 md:gap-8">
-      {/* <li>
+        <ul className='mt-12 flex text-black/60 font-medium gap-2 items-center justify-center'>
+          {/* <li>
         <a
           href="#"
           rel="noreferrer"
@@ -67,7 +71,7 @@ const Footer = () => {
         </a>
       </li> */}
 
-      {/* <li>
+          {/* <li>
         <a
           href="#"
           rel="noreferrer"
@@ -119,22 +123,28 @@ const Footer = () => {
         </a>
       </li> */}
 
-      <li>
-        <a
-          href="#"
-          rel="noreferrer"
-          target="_blank"
-          className="text-gray-700 transition hover:text-gray-700/75"
-        >
-          <span className="sr-only">Dribbble</span>
-          <img src={linkedin} alt="link" className='h-5 flex justify-center items-center mt-[2px]' />
-        </a>
-      </li>
-    </ul>
+          <p className='text-sm'>Follow us on</p>
+          <li>
+            <a
+              href='https://www.linkedin.com/company/genfox-ai/'
+              rel='noreferrer'
+              target='_blank'
+              className='text-gray-500 transition hover:text-gray-700/75'
+            >
+              <span className='sr-only'>Dribbble</span>
+              <img
+                src={linkedin}
+                alt='link'
+                className='h-5 flex justify-center items-center mt-[2px]'
+              />
+            </a>
+          </li>
+        </ul>
       </div>
-      <div className="mt-4 mb-2 border-t border-gray-200 mx-5"></div>
-      <p className='text-neutral-300 mx-5 font-medium text-[12px]'>@ 2024 GenFox</p>
-
+      <div className='mt-4 mb-2 border-t border-gray-200 mx-5'></div>
+      <p className='text-neutral-300 mx-5 font-medium text-[12px]'>
+        @ 2024 GenFox
+      </p>
     </motion.footer>
   );
 };

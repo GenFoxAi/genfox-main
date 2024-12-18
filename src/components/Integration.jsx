@@ -20,17 +20,14 @@ const Integration = () => {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 2 }}
           >
-            "Empower your business with our WhatsApp Chatbot for instant
-            customer support. <br />
-            Effortlessly connect with customers through automated responses and
-            live agent assistance."
+           GenFox leverages WhatsApp’s robust architecture to deliver seamless, real-time assistance. <br /> By integrating AI directly into a platform you already use daily
           </motion.p>
         </div>
 
         <div className=' sm:py-[0px]'>
           <motion.img
             src={whatsapp2}
-            className='sm:h-[50%] sm:px-[80px]'
+            className='sm:h-[50%] sm:px-[130px]'
             alt='whatsapp_integration'
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}

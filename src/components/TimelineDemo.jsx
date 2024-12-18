@@ -1,5 +1,5 @@
+/* eslint-disable react/prop-types */
 import { AnimatePresence, motion } from 'framer-motion';
-import { FiAlertCircle } from 'react-icons/fi';
 import { useState } from 'react';
 import { Timeline } from './ui/Timeline';
 import whatsapp from '../assets/WhatsApp.svg.webp';
@@ -20,63 +20,63 @@ const SpringModal = ({ isOpen, setIsOpen, content }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={() => setIsOpen(false)}
-          className="bg-black/50 backdrop-blur-sm fixed inset-0 z-50 flex items-center justify-center"
+          className='bg-black/50 backdrop-blur-sm fixed inset-0 z-50 flex items-center justify-center'
         >
           <motion.div
             initial={{ scale: 0.95 }}
             animate={{ scale: 1 }}
             exit={{ scale: 0.95 }}
             onClick={(e) => e.stopPropagation()}
-            className="bg-white rounded-lg w-full max-w-lg shadow-xl p-6 text-black"
+            className='bg-white rounded-lg w-full max-w-lg shadow-xl p-6 text-black'
           >
             {/* Header */}
-            <div className="flex items-center justify-center mb-4">
-              <div className="flex items-center justify-center gap-2">
-                <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center">
+            <div className='flex items-center justify-center mb-4'>
+              <div className='flex items-center justify-center gap-2'>
+                <div className='w-10 h-10 rounded-full bg-black flex items-center justify-center'>
                   <img
-                    src="/path-to-your-first-icon.png"
-                    alt="First Icon"
-                    className="w-6 h-6"
+                    src='/path-to-your-first-icon.png'
+                    alt='First Icon'
+                    className='w-6 h-6'
                   />
                 </div>
-                <div className="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center">
+                <div className='w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center'>
                   <img
-                    src="/path-to-your-second-icon.png"
-                    alt="Second Icon"
-                    className="w-6 h-6"
+                    src='/path-to-your-second-icon.png'
+                    alt='Second Icon'
+                    className='w-6 h-6'
                   />
                 </div>
               </div>
             </div>
 
             {/* Title */}
-            <h3 className="text-center text-2xl font-semibold text-gray-900 mb-2">
-              {content.title || "Connect Untitled to Linear"}
+            <h3 className='text-center text-2xl font-semibold text-gray-900 mb-2'>
+              {content.title || 'Connect Untitled to Linear'}
             </h3>
 
             {/* Subtitle */}
-            <p className="text-center text-gray-600 mb-6">
+            <p className='text-center text-gray-600 mb-6'>
               {content.description ||
-                "Prioritize work based on customer needs and build a tighter feedback loop with your customers."}
+                'Prioritize work based on customer needs and build a tighter feedback loop with your customers.'}
             </p>
 
             {/* Permissions List */}
-            <ul className="text-gray-700 mb-6 space-y-2">
+            <ul className='text-gray-700 mb-6 space-y-2'>
               {content.permissions?.map((permission, index) => (
-                <li key={index} className="flex items-start gap-2">
-                  <div className="w-5 h-5 flex items-center justify-center">
+                <li key={index} className='flex items-start gap-2'>
+                  <div className='w-5 h-5 flex items-center justify-center'>
                     <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
+                      xmlns='http://www.w3.org/2000/svg'
+                      fill='none'
+                      viewBox='0 0 24 24'
                       strokeWidth={2}
-                      stroke="currentColor"
-                      className="text-indigo-600 w-5 h-5"
+                      stroke='currentColor'
+                      className='text-indigo-600 w-5 h-5'
                     >
                       <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M5 13l4 4L19 7"
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        d='M5 13l4 4L19 7'
                       />
                     </svg>
                   </div>
@@ -86,36 +86,40 @@ const SpringModal = ({ isOpen, setIsOpen, content }) => {
             </ul>
 
             {/* Link and Copy Button */}
-            <div className="bg-gray-100 rounded-md p-3 flex items-center justify-between mb-4">
-              <span className="text-gray-600 text-sm truncate">
+            <div className='bg-gray-100 rounded-md p-3 flex items-center justify-between mb-4'>
+              <span className='text-gray-600 text-sm truncate'>
                 app.untitledui.com/integrations/linear
               </span>
               <button
-                onClick={() => navigator.clipboard.writeText(content.link || "app.untitledui.com/integrations/linear")}
-                className="text-indigo-600 text-sm font-semibold hover:underline"
+                onClick={() =>
+                  navigator.clipboard.writeText(
+                    content.link || 'app.untitledui.com/integrations/linear'
+                  )
+                }
+                className='text-indigo-600 text-sm font-semibold hover:underline'
               >
                 Copy link
               </button>
             </div>
 
             {/* Action Buttons */}
-            <div className="flex justify-between gap-4">
+            <div className='flex justify-between gap-4'>
               <button
-                onClick={() => console.log("How it works clicked")}
-                className="text-gray-600 hover:text-gray-800 font-medium text-sm"
+                onClick={() => console.log('How it works clicked')}
+                className='text-gray-600 hover:text-gray-800 font-medium text-sm'
               >
                 How it works
               </button>
-              <div className="flex gap-3">
+              <div className='flex gap-3'>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium py-2 px-4 rounded-md"
+                  className='bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium py-2 px-4 rounded-md'
                 >
                   Cancel
                 </button>
                 <button
                   onClick={content.onConfirm}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-md"
+                  className='bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-md'
                 >
                   Allow access
                 </button>
@@ -127,7 +131,6 @@ const SpringModal = ({ isOpen, setIsOpen, content }) => {
     </AnimatePresence>
   );
 };
-
 
 // Timeline Demo Component
 export function TimelineDemo() {
@@ -144,7 +147,7 @@ export function TimelineDemo() {
       title: 'Whatsapp',
       website: 'whatsapp.com',
       description:
-        'Integration with WhatsApp for enhanced messaging capabilities. Connect with customers where they are most active.',
+        'Seamlessly integrated with WhatsApp, GenFox enhances messaging capabilities, bringing smart assistance directly to the platform you use most. Manage tasks, track progress, and stay connected effortlessly.',
       modal: {
         title: 'WhatsApp Integration',
         description:
@@ -157,7 +160,7 @@ export function TimelineDemo() {
       title: 'Apple',
       website: 'apple.com',
       description:
-        'Integrate with Apple services for better user experience. Take advantage of Apple’s robust ecosystem and services.',
+        'GenFox integrates effortlessly with Apple services, leveraging their robust ecosystem to enhance your experience. From syncing with Apple Health to seamless calendar management, it’s built to work smarter for you.',
       modal: {
         title: 'Apple Integration',
         description:
@@ -170,7 +173,7 @@ export function TimelineDemo() {
       title: 'Google',
       website: 'google.com',
       description:
-        'Integrate with Google’s ecosystem for productivity. Gain access to tools for streamlined workflows and collaboration.',
+        'GenFox integrates seamlessly with Google’s ecosystem, empowering you with tools for enhanced productivity, streamlined workflows, and effortless collaboration.',
       modal: {
         title: 'Google Integration',
         description:
@@ -183,7 +186,7 @@ export function TimelineDemo() {
       title: 'Outlook',
       website: 'outlook.com',
       description:
-        'Enhance your platform with Outlook email services. Utilize professional email and scheduling tools with ease.',
+        'GenFox integrates with Outlook, bringing professional email and scheduling tools right to your fingertips. Manage your inbox and calendar effortlessly for a more organized day.',
       modal: {
         title: 'Outlook Integration',
         description:
@@ -191,7 +194,6 @@ export function TimelineDemo() {
       },
     },
   ];
-  
 
   const aiProducts = [
     {
@@ -199,11 +201,11 @@ export function TimelineDemo() {
       image: pic5,
       title: 'Privacy and Security AI',
       description:
-        'Enhance your platform security with advanced AI-powered privacy solutions. Stay one step ahead of cyber threats.',
+        'Your privacy is our priority. GenFox is built with advanced encryption and privacy-first AI to ensure your data is secure, confidential, and always under your control. Because trust is the foundation of every great assistant.',
       modal: {
         title: 'Privacy and Security AI',
         description:
-          'Advanced AI-powered solutions to ensure data privacy and safeguard your platform from vulnerabilities.',
+          'GenFox evolves with you. Its adaptive learning system understands your preferences, anticipates your needs, and personalizes every interaction—making it smarter and more intuitive with each use.',
       },
     },
     {
@@ -211,7 +213,7 @@ export function TimelineDemo() {
       image: pic6,
       title: 'Adaptive Learning System',
       description:
-        'Leverage machine learning to create dynamic, adaptive learning experiences. Revolutionize education with personalized AI tools.',
+        'GenFox delivers insights that matter, when they matter. With real-time data analytics and intelligent forecasting, it empowers you to make informed decisions and stay ahead, effortlessly.',
       modal: {
         title: 'Adaptive Learning System',
         description:
@@ -223,7 +225,7 @@ export function TimelineDemo() {
       image: pic7,
       title: 'Real-Time Data Analytics & Forecasting',
       description:
-        'Make data-driven decisions faster with AI-driven real-time analytics and predictions. Turn raw data into actionable insights.',
+        'Unlock deeper understanding with GenFox’s AI-Powered Insights Engine. It analyzes patterns, delivers actionable recommendations, and helps you make smarter decisions in every aspect of your life.',
       modal: {
         title: 'Real-Time Data Analytics',
         description:
@@ -243,7 +245,6 @@ export function TimelineDemo() {
       },
     },
   ];
-  
 
   const data = [
     {
@@ -268,9 +269,10 @@ export function TimelineDemo() {
                   </p>
                 </div>
               </div>
-              <p className='text-[14px] py-4 px-5 font-medium text-black/50'>
+              <p className='text-[12px] sm:text-[14px] md:text-[10px] lg:text-[12px] xl:text-[15px] py-2 sm:py-4 md:py-5 px-3 sm:px-5 md:px-6 font-medium text-black/50'>
                 {item.description}
               </p>
+
               {/* <div className='flex items-center justify-end pb-4 px-4'>
                 <button
                   onClick={() => {
@@ -306,7 +308,7 @@ export function TimelineDemo() {
                   <p className='font-semibold text-md'>{product.title}</p>
                 </div>
               </div>
-              <p className='text-[14px] py-4 px-5 font-medium text-black/50'>
+              <p className='text-[12px] sm:text-[14px] md:text-[10px] lg:text-[12px] xl:text-[15px] py-2 sm:py-4 md:py-5 px-3 sm:px-5 md:px-6 font-medium text-black/50'>
                 {product.description}
               </p>
               {/* <div className='flex items-center justify-end pb-4 px-4'>

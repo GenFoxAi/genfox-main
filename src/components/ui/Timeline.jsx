@@ -4,7 +4,7 @@ import { useScroll, useTransform, motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import TextGenerateEffect from '../ui/TextGenerateEffect';
 
-const words = 'Simplify Your Life with Margaret AI';
+const words = 'Powerful Connections for Smarter Assistance';
 
 export const Timeline = ({ data }) => {
   const ref = useRef(null);
@@ -28,7 +28,7 @@ export const Timeline = ({ data }) => {
       const rect = ref.current.getBoundingClientRect();
       const computedStyles = window.getComputedStyle(ref.current);
       const marginBottom = parseFloat(computedStyles.marginBottom);
-      
+
       const buffer = isMobile ? 0 : 50;
       setContentHeight(rect.height + marginBottom + buffer);
     }
@@ -36,7 +36,7 @@ export const Timeline = ({ data }) => {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ['start 0%', 'end 100%'], 
+    offset: ['start 0%', 'end 100%'],
   });
 
   const heightTransform = useTransform(
@@ -48,13 +48,14 @@ export const Timeline = ({ data }) => {
 
   return (
     <div className='w-full bg-white font-sans md:px-10' ref={containerRef}>
-      <div className='max-w-7xl mx-auto py-10 px-4 md:px-8 lg:px-10'>
-        <h2 className='text-lg md:text-4xl mb-4 text-[#2e2e2e] max-w-4xl custom-font'>
+      <div className='max-w-7xl mx-auto pt-10 px-4 md:px-8 lg:px-10'>
+        <h2 className='text-lg md:text-3xl mb-4 text-[#2e2e2e] max-w-4xl custom-font'>
           <TextGenerateEffect duration={2} filter={false} words={words} />
         </h2>
-        <p className='text-neutral-700 text-sm md:text-base max-w-sm'>
-          Margaret integrates your favorite apps to streamline your daily
-          routines.
+        <p className='text-neutral-400 font-medium text-sm md:text-base max-w-xl'>
+          Streamline your life with GenFox’s powerful platform integrations.
+          Designed to work where you do, it turns everyday tools into a hub of
+          intelligent support.
         </p>
       </div>
       <div ref={ref} className='relative max-w-7xl mx-auto pb-20'>

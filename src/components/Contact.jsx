@@ -4,13 +4,12 @@ import { useState } from 'react';
 import { Label } from './ui/label';
 import { Input } from './ui/input';
 import { cn } from '@/lib/utils';
-import robo from '../assets/robo.png';
 import { motion } from 'framer-motion';
+import robo from '../assets/ai_image.jpg';
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
     firstname: '',
-    lastname: '',
     email: '',
     contactno: '',
   });
@@ -27,7 +26,6 @@ export default function ContactUs() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Basic validation
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phonePattern = /^\+?[0-9]{7,15}$/;
 
@@ -47,7 +45,6 @@ export default function ContactUs() {
 
     const body = new URLSearchParams();
     body.append('entry.538181747', formData.firstname);
-    body.append('entry.374034099', formData.lastname);
     body.append('entry.910439913', formData.email);
     body.append('entry.25111992', formData.contactno);
 
@@ -61,7 +58,7 @@ export default function ContactUs() {
         body,
       });
       setStatus('Success! Your response has been submitted.');
-      setFormData({ firstname: '', lastname: '', email: '', contactno: '' });
+      setFormData({ firstname: '', email: '', contactno: '' });
     } catch (error) {
       setStatus('Failed to submit. Please try again.');
     }
@@ -77,37 +74,24 @@ export default function ContactUs() {
       {/* Form Section */}
       <div className='w-full md:w-2/3 '>
         <form className='my-8' onSubmit={handleSubmit}>
-          <h2 className='font-bold text-xl text-neutral-800 dark:text-neutral-200'>
+          <h2 className='font-bold text-2xl text-neutral-800 dark:text-neutral-200'>
             Contact Us
           </h2>
-          <p className='text-neutral-600 text-sm max-w-sm mt-2 mb-12 dark:text-neutral-300'>
+          <p className='text-neutral-500 text-sm max-w-sm mt-2 mb-12 font-medium dark:text-neutral-300'>
             We’d love to hear from you! Please fill out the form below to get in
             touch with us.
           </p>
-          <div className='flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4'>
-            <LabelInputContainer>
-              <Label htmlFor='firstname'>First name</Label>
-              <Input
-                id='firstname'
-                placeholder='John'
-                type='text'
-                value={formData.firstname}
-                onChange={handleChange}
-                required
-              />
-            </LabelInputContainer>
-            <LabelInputContainer>
-              <Label htmlFor='lastname'>Last name</Label>
-              <Input
-                id='lastname'
-                placeholder='Doe'
-                type='text'
-                value={formData.lastname}
-                onChange={handleChange}
-                required
-              />
-            </LabelInputContainer>
-          </div>
+          <LabelInputContainer className='mb-4'>
+            <Label htmlFor='firstname'>First name</Label>
+            <Input
+              id='firstname'
+              placeholder='John'
+              type='text'
+              value={formData.firstname}
+              onChange={handleChange}
+              required
+            />
+          </LabelInputContainer>
           <LabelInputContainer className='mb-4'>
             <Label htmlFor='email'>Email Address</Label>
             <Input

@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+/* eslint-disable react/prop-types */
+import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 // import hero from '../assets/robo.png';
 import whatsapp from '../assets/Whatsapp.png';
@@ -9,8 +10,14 @@ import outlook from '../assets/8500323.webp';
 import dropbox from '../assets/DropboxOctDenoiserBeauty_002 2.png';
 import avatar from '../assets/new_avatar.png';
 
-const Hero = () => {
+const Hero = ({ contactRef }) => {
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const scrollToContact = useCallback(() => {
+    if (contactRef?.current) {
+      contactRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [contactRef]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -145,7 +152,7 @@ const Hero = () => {
     <div className='relative w-full h-[650px] overflow-hidden  text-[#2e2e2e] px-5 flex justify-between items-center flex-col sm:flex-row sm:px-[100px] mt-[50px]'>
       <div className='w-full'>
         <motion.div
-          className='custom-font text-[30px] md:text-[40px] lg:text-[60px] xl:text-[70px] leading-snug text-center sm:text-left'
+          className='custom-font text-[30px] md:text-[40px] lg:text-[45px] xl:text-[60px] leading-snug text-center sm:text-left'
           initial='hidden'
           animate='visible'
           variants={textVariants}
@@ -155,13 +162,13 @@ const Hero = () => {
           <motion.p variants={lineVariants}>from the Future</motion.p>
         </motion.div>
         <motion.div
-          className='pl-2 font-medium text-[15px] sm:text-[22px] mt-5 text-[#898d91] text-center sm:text-left'
+          className='pl-2 font-medium text-[15px] lg:text-[16px] xl:text-[18px] sm:text-[18px] mt-5 text-[#898d91] text-center sm:text-left'
           initial='hidden'
           animate='visible'
           variants={subTextVariants}
         >
           <p>
-            Customize your own fin AI <br /> so you can focus on your living
+          Join the Future be the Earliest to Meet Donna. <br />Customize your own fin AI so you can focus on your living.
           </p>
         </motion.div>
         <motion.div
@@ -172,6 +179,7 @@ const Hero = () => {
         >
           <button
             type='submit'
+            onClick={scrollToContact}
             className='flex justify-center items-center gap-2 mx-auto shadow-xl text-base sm:text-lg bg-gray-50 backdrop-blur-md font-medium lg:font-semibold isolation-auto border-gray-50 
   before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full 
   before:bg-emerald-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 
