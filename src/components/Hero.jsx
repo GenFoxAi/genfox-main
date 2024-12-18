@@ -151,7 +151,7 @@ const Hero = ({ contactRef, nameInputRef }) => {
     <div className='relative w-full h-[650px] overflow-hidden  text-[#2e2e2e] px-5 flex justify-between items-center flex-col sm:flex-row sm:px-[100px] mt-[50px]'>
       <div className='w-full'>
         <motion.div
-          className='custom-font text-[30px] md:text-[40px] lg:text-[40px] xl:text-[60px] leading-snug text-center sm:text-left'
+          className='custom-font text-[30px] md:text-[40px] lg:text-[40px] xl:text-[50px] leading-snug text-center sm:text-left'
           initial='hidden'
           animate='visible'
           variants={textVariants}
@@ -208,7 +208,8 @@ const Hero = ({ contactRef, nameInputRef }) => {
           <motion.img
             src={avatar}
             alt='AI Assistant'
-            className='w-full h-[305px] sm:h-[500px] object-cover'
+            className='w-full h-[305px] sm:h-[500px] md:h-[500px] lg:h-[500px] xl:h-[500px] 2xl:h-[500px] object-cover overflow-visible'
+
             variants={imageVariants}
             initial='hidden'
             animate='visible'
