@@ -43,7 +43,7 @@ const About = () => {
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 2 }}
       >
-        Margaret is an advanced AI assistant that streamlines daily tasks,
+        GenFox is an advanced AI assistant that streamlines daily tasks,
         enhances productivity, and offers personalized, intelligent support.
       </motion.p>
     </div>

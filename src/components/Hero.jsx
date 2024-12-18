@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
-// import hero from '../assets/robo.png';
 import whatsapp from '../assets/Whatsapp.png';
 import drive from '../assets/Drive2OctDenoiserBeauty_002 2.png';
 import gmail from '../assets/Gmail.png';
@@ -10,14 +9,17 @@ import outlook from '../assets/8500323.webp';
 import dropbox from '../assets/DropboxOctDenoiserBeauty_002 2.png';
 import avatar from '../assets/new_avatar.png';
 
-const Hero = ({ contactRef }) => {
+const Hero = ({ contactRef, nameInputRef }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const scrollToContact = useCallback(() => {
     if (contactRef?.current) {
       contactRef.current.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => {
+        nameInputRef.current?.focus();
+      }, 1200);
     }
-  }, [contactRef]);
+  }, [contactRef, nameInputRef]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,10 +57,7 @@ const Hero = ({ contactRef }) => {
     hidden: { opacity: 0, y: -100 },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
   };
-  // const imageVariants = {
-  //   hidden: { opacity: 0, y: -100 },
-  //   visible: { opacity: 1, y: 0, transition: { duration: 1 }, rotate: 2 },
-  // };
+
 
   const buttonVariants = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -152,7 +151,7 @@ const Hero = ({ contactRef }) => {
     <div className='relative w-full h-[650px] overflow-hidden  text-[#2e2e2e] px-5 flex justify-between items-center flex-col sm:flex-row sm:px-[100px] mt-[50px]'>
       <div className='w-full'>
         <motion.div
-          className='custom-font text-[30px] md:text-[40px] lg:text-[45px] xl:text-[60px] leading-snug text-center sm:text-left'
+          className='custom-font text-[30px] md:text-[40px] lg:text-[40px] xl:text-[60px] leading-snug text-center sm:text-left'
           initial='hidden'
           animate='visible'
           variants={textVariants}
@@ -162,13 +161,14 @@ const Hero = ({ contactRef }) => {
           <motion.p variants={lineVariants}>from the Future</motion.p>
         </motion.div>
         <motion.div
-          className='pl-2 font-medium text-[15px] lg:text-[16px] xl:text-[18px] sm:text-[18px] mt-5 text-[#898d91] text-center sm:text-left'
+          className='pl-2 font-medium text-[15px] lg:text-[14px] xl:text-[18px] sm:text-[18px] mt-5 text-[#898d91] text-center sm:text-left'
           initial='hidden'
           animate='visible'
           variants={subTextVariants}
         >
           <p>
-          Join the Future be the Earliest to Meet Donna. <br />Customize your own fin AI so you can focus on your living.
+            Join the Future be the Earliest to Meet Donna. <br />
+            Customize your own fin AI so you can focus on your living.
           </p>
         </motion.div>
         <motion.div
@@ -185,7 +185,7 @@ const Hero = ({ contactRef }) => {
   before:bg-emerald-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 
   relative z-10 px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 overflow-hidden border-2 rounded-full group'
           >
-            Get Started Now
+            Join Now
             <svg
               className='w-6 h-6 sm:w-8 sm:h-8 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-gray-800 group-hover:text-gray-50 ease-linear duration-300 rounded-full 
     border border-gray-700 group-hover:border-none p-1 sm:p-2 rotate-45'
@@ -201,24 +201,19 @@ const Hero = ({ contactRef }) => {
         </motion.div>
       </div>
 
-      {/* <div className='relative w-[80%] flex items-center'> */}
+
       <div className='relative sm:w-[60%] flex items-center'>
-        {/* <motion.img
-          src={hero}
-          alt='AI Assistant'
-          className='w-full h-full object-cover rounded-xl'
-          variants={imageVariants}
-          initial='hidden'
-          animate='visible'
-        /> */}
-        <motion.img
-          src={avatar}
-          alt='AI Assistant'
-          className='w-full h-full object-cover'
-          variants={imageVariants}
-          initial='hidden'
-          animate='visible'
-        />
+    
+        <div className='mr-7'>
+          <motion.img
+            src={avatar}
+            alt='AI Assistant'
+            className='w-full h-[305px] sm:h-[500px] object-cover'
+            variants={imageVariants}
+            initial='hidden'
+            animate='visible'
+          />
+        </div>
         {/* WhatsApp Icon */}
         <motion.div
           className='absolute top-1/2 transform -translate-y-1/2 '

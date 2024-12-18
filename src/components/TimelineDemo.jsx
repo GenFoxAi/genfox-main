@@ -269,7 +269,7 @@ export function TimelineDemo() {
                   </p>
                 </div>
               </div>
-              <p className='text-[12px] sm:text-[14px] md:text-[10px] lg:text-[12px] xl:text-[15px] py-2 sm:py-4 md:py-5 px-3 sm:px-5 md:px-6 font-medium text-black/50'>
+              <p className='text-[12px] sm:text-[14px] md:text-[10px] lg:text-[12px] xl:text-[14px] py-2 sm:py-4 md:py-5 px-3 sm:px-5 md:px-6 font-medium text-black/50'>
                 {item.description}
               </p>
 
@@ -308,7 +308,7 @@ export function TimelineDemo() {
                   <p className='font-semibold text-md'>{product.title}</p>
                 </div>
               </div>
-              <p className='text-[12px] sm:text-[14px] md:text-[10px] lg:text-[12px] xl:text-[15px] py-2 sm:py-4 md:py-5 px-3 sm:px-5 md:px-6 font-medium text-black/50'>
+              <p className='text-[12px] sm:text-[14px] md:text-[10px] lg:text-[12px] xl:text-[14px] py-2 sm:py-4 md:py-5 px-3 sm:px-5 md:px-6 font-medium text-black/50'>
                 {product.description}
               </p>
               {/* <div className='flex items-center justify-end pb-4 px-4'>

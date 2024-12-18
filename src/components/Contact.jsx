@@ -1,13 +1,14 @@
+/* eslint-disable react/prop-types */
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Label } from './ui/label';
 import { Input } from './ui/input';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import robo from '../assets/ai_image.jpg';
 
-export default function ContactUs() {
+export default function ContactUs({ nameInputRef }) {
   const [formData, setFormData] = useState({
     firstname: '',
     email: '',
@@ -74,7 +75,7 @@ export default function ContactUs() {
       {/* Form Section */}
       <div className='w-full md:w-2/3 '>
         <form className='my-8' onSubmit={handleSubmit}>
-          <h2 className='font-bold text-2xl text-neutral-800 dark:text-neutral-200'>
+          <h2 className='font-bold text-3xl text-neutral-800 dark:text-neutral-200'>
             Contact Us
           </h2>
           <p className='text-neutral-500 text-sm max-w-sm mt-2 mb-12 font-medium dark:text-neutral-300'>
@@ -82,7 +83,7 @@ export default function ContactUs() {
             touch with us.
           </p>
           <LabelInputContainer className='mb-4'>
-            <Label htmlFor='firstname'>First name</Label>
+            <Label htmlFor='firstname'>Name</Label>
             <Input
               id='firstname'
               placeholder='John'
@@ -90,6 +91,7 @@ export default function ContactUs() {
               value={formData.firstname}
               onChange={handleChange}
               required
+              ref={nameInputRef}
             />
           </LabelInputContainer>
           <LabelInputContainer className='mb-4'>
